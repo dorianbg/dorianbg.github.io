@@ -15,9 +15,7 @@ categories:
 
 You can also follow a walk-through of the code in this Youtube video:
 
-```liquid
 {% include embed/youtube.html id='i8XIPPcOLMg' %}
-```
 
 * * *
 

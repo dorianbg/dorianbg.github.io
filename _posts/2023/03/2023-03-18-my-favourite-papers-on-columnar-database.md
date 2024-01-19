@@ -9,6 +9,6 @@ categories:
 
 - Probably the best paper to read
 
-### [Massively Parallel Databases and MapReduce Systems](http://www.cut.ac.cy/digitalAssets/122/122275_1002013-FnTDB-Survey.pdf)
+### [Massively Parallel Databases and MapReduce Systems](https://www.cut.ac.cy/digitalAssets/122/122275_1002013-FnTDB-Survey.pdf)
 
 - very interesting comparison of MPP Databases (bit outdated)

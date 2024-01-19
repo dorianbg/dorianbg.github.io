@@ -9,9 +9,9 @@ categories:
 
 Apache Spark is quickly becoming one of the best open source data analysis platforms.
 
-With the continuous improvement of [Apache Spark](http://spark.apache.org/), especially the SQL engine and emergence of related projects such as Zeppelin notebooks we are starting to get the data analysis functionality we had on single machine setups using RDBMS and data analysis libraries like Pandas.
+With the continuous improvement of [Apache Spark](https://spark.apache.org/), especially the SQL engine and emergence of related projects such as Zeppelin notebooks we are starting to get the data analysis functionality we had on single machine setups using RDBMS and data analysis libraries like Pandas.
 
-[Pandas](http://pandas.pydata.org/), a data analysis tools for the [Python](http://www.python.org/) programming language, is currently the most popular and mature open souce data analysis tool. The library is highly optimized for performance, with critical code paths written in [Cython](https://en.wikipedia.org/wiki/Cython "Cython") or [C](https://en.wikipedia.org/wiki/C_(programming_language) "C (programming language)").
+[Pandas](https://pandas.pydata.org/), a data analysis tools for the [Python](https://www.python.org/) programming language, is currently the most popular and mature open souce data analysis tool. The library is highly optimized for performance, with critical code paths written in [Cython](https://en.wikipedia.org/wiki/Cython "Cython") or [C](https://en.wikipedia.org/wiki/C_(programming_language) "C (programming language)").
 
 This benchmark will compare the performance of those frameworks on common data analysis tasks:
 
@@ -113,7 +113,7 @@ Results:
 ```
 Comment:
 
-I saw other blogpost [detailing](http://ihorbobak.com/index.php/2015/06/03/spark-sql-bad-performance/) similar problem.  The performance is disappointing but I hope Spark manages to fix this issue in the future.  Spark >= 2.0 supposedly shows great [improvements](https://databricks.com/blog/2016/05/23/apache-spark-as-a-compiler-joining-a-billion-rows-per-second-on-a-laptop.html) in this aspect.
+I saw other blogpost [detailing](https://ihorbobak.com/index.php/2015/06/03/spark-sql-bad-performance/) similar problem.  The performance is disappointing but I hope Spark manages to fix this issue in the future.  Spark >= 2.0 supposedly shows great [improvements](https://databricks.com/blog/2016/05/23/apache-spark-as-a-compiler-joining-a-billion-rows-per-second-on-a-laptop.html) in this aspect.
 
 ## Test 4: Self joins
 
@@ -181,6 +181,6 @@ These benchmarks show that although Apache Spark has great capabilities and pote
 
 The most worrying aspect is the bad performance of joins as well as sorting but these tasks are naturally very demanding compared to the simpler where and group-by statements which can be efficiently distributed with the Map-Reduce model. 
 
-We could probably conclude that any dataset with less than 10 million rows (<5 GB file) shouldn’t be analyzed with Spark. For datasets larger than 5GB, rather than using a Spark cluster I propose to use Pandas on a single server with 128/160/192GB RAM. This will be more effective for intermediate size datasets (<200–500GB) than Spark (especially if you use a library like [Dask](http://dask.pydata.org/en/latest/)). For datasets above 500GB Spark combined with Hadoop Distributed File System is definitely the best solution as it allows quicker data reads and parralel workloads. Also at this data size it is quite hard to utilize SMP data processing which is much more efficient than MPP / distributed processing.
+We could probably conclude that any dataset with less than 10 million rows (<5 GB file) shouldn’t be analyzed with Spark. For datasets larger than 5GB, rather than using a Spark cluster I propose to use Pandas on a single server with 128/160/192GB RAM. This will be more effective for intermediate size datasets (<200–500GB) than Spark (especially if you use a library like [Dask](https://dask.pydata.org/en/latest/)). For datasets above 500GB Spark combined with Hadoop Distributed File System is definitely the best solution as it allows quicker data reads and parralel workloads. Also at this data size it is quite hard to utilize SMP data processing which is much more efficient than MPP / distributed processing.
 
 ** In Spark 2.2 we got a [completely new query optimizer](https://databricks.com/blog/2017/08/31/cost-based-optimizer-in-apache-spark-2-2.html) so I might have to re-run the test when I get access to proper infrastructure again.

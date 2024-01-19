@@ -4,5 +4,12 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+A software engineer with interests in data systems, platform engineering and developer experience. Based in London, United Kingdom.
+
+I am interested in idempotency, fault tolerance and simplicity.
+
+Favourite data systems:
+- Databases: PostgreSQL/DuckDB
+- Languages: Python
+- Back-end engineering
+- Data ops

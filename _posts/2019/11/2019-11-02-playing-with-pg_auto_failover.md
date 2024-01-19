@@ -2,8 +2,8 @@
 title: "Introduction to PostgreSQL High availability with pg_auto_failover"
 date: "2019-11-02"
 categories: 
-  - "data-engineering"
   - "databases"
+  - "high-availability"
 ---
 
 ## Introduction

@@ -2,7 +2,6 @@
 title: "Get Spark Clasifier metrics using the Confusion Matrix"
 date: "2017-06-18"
 categories: 
-  - "data-engineering"
   - "data-science"
 ---
 

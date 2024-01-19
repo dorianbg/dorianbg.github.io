@@ -3,8 +3,6 @@ title: "General guidelines for design of batch jobs"
 date: "2023-03-18"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
 ---
 
 - **Have a config driven and easily extensible library for your ETL**

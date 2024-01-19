@@ -3,8 +3,7 @@ title: "My articles for Sonra Intelligence"
 date: "2018-05-11"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
+  - "databases"
 ---
 
 ## Apache Airflow

@@ -2,7 +2,7 @@
 title: "Envoy proxy and modern load balancing"
 date: "2019-11-02"
 categories: 
-  - "software-engineering"
+  - "load-balancers"
 ---
 
 I spent a bit of  time looking into alternative load balancing solutions to Nginx/HA Proxy. It seems Envoy is by far the leader in this space and the product seems really good.

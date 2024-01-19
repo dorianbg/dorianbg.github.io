@@ -3,8 +3,6 @@ title: "Important skills for data engineers"
 date: "2023-03-18"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
 ---
 
 Data engineering specific:

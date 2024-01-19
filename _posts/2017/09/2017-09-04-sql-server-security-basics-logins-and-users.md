@@ -2,7 +2,7 @@
 title: "SQL Server Security Basics - Logins and Users"
 date: "2017-09-04"
 categories: 
-  - "sql-server"
+  - "sql"
 ---
 
 ## Logins and users basics

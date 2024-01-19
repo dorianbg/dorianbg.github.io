@@ -3,8 +3,7 @@ title: "Introduction to PostgreSQL High availability with pg_auto_failover"
 date: "2019-11-02"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
+  - "databases"
 ---
 
 ## Introduction
@@ -39,35 +38,40 @@ make
 
 To see where the postgresql binaries are:
 
-pg_config --bindir
+`pg_config --bindir`
 
 Install the pg_auto_failover binaries to pg_config --bindir
 
-sudo make install
+`sudo make install`
 
 Add the bins to path (including auto failover related ones):
 
-export PATH="/usr/local/Cellar/postgresql/11.3/bin/:$PATH"
+`export PATH="/usr/local/Cellar/postgresql/11.3/bin/:$PATH"`
 
 #### 3. Create the monitor (ie. a PostgreSQL and a deamon agent)
 
-pg_autoctl create monitor --pgdata /usr/local/var/postgres_monitor --nodename localhost --pgport 5444
+`pg_autoctl create monitor --pgdata /usr/local/var/postgres_monitor --nodename localhost --pgport 5444`
 
 Output:
 
+```shell
 21:59:01 INFO  Initialising a PostgreSQL cluster at "/usr/local/var/postgres_monitor"
 21:59:01 INFO /usr/local/bin/pg_ctl --pgdata /usr/local/var/postgres_monitor --options "-p 5444" --options "-h *" --wait start
 21:59:01 INFO Granting connection privileges on ::1/128
 21:59:01 INFO Your pg_auto_failover monitor instance is now ready on port 5444.
 21:59:01 INFO pg_auto_failover monitor is ready at postgres://autoctl_node@localhost:5444/pg_auto_failover
 21:59:01 INFO Monitor has been succesfully initialized.
+```
 
 #### 4. Create primary node (specifying the monitor)
 
+```shell
 pg_autoctl create postgres --pgdata /usr/local/var/primary --monitor postgres://autoctl_node@localhost:5444/pg_auto_failover --pgport 5432 --pgctl /usr/local/Cellar/postgresql/11.3/bin/pg_ctl
+```
 
 Output - you can notice the DB also gets started automatically:
 
+```shell
 22:00:55 WARN  Failed to resolve hostname from address "192.168.0.17": nodename nor servname provided, or not known
 22:00:55 INFO Using local IP address "192.168.0.17" as the --nodename.
 22:00:55 INFO Found pg_ctl for PostgreSQL 11.3 at /usr/local/bin/pg_ctl
@@ -88,24 +92,29 @@ pg_autoctl run --pgdata /usr/local/var/primary
 22:03:57 INFO pg_autoctl service is starting
 22:03:57 INFO Calling node_active for node default/1/0 with current state: single, PostgreSQL is running, sync_state is "", WAL delta is -1.
 22:04:02 INFO Calling node_active for node default/1/0 with current state: single, PostgreSQL is running, sync_state is "", WAL delta is -1.
+```
 
 #### 5. Create and start the secondary node (also specifying the monitor)
 
+```shell
 pg_autoctl create postgres --pgdata /usr/local/var/secondary --monitor postgres://autoctl_node@localhost:5444/pg_auto_failover --pgport 5433 --pgctl /usr/local/Cellar/postgresql/11.3/bin/pg_ctl
 
 pg_autoctl run --pgdata /usr/local/var/secondary/
+```
 
 * * *
 
 #### 6. Connection string from clients to postgres is the following
 
-pg_autoctl show uri --formation default --pgdata /usr/local/var/primary
+`pg_autoctl show uri --formation default --pgdata /usr/local/var/primary`
 
 Output:
 
+```shell
 postgres://192.168.0.17:5433,192.168.0.17:5432/postgres?target_session_attrs=read-write
 
 The PostgreSQL client will automatically failover from 192.168.0.17:5433 to 192.168.0.17:5432 in case of the DBs is down
+```
 
 ## Testing failover
 
@@ -119,17 +128,20 @@ Lets see what PostgreSQL processes are running locally:
 
 Output:
 
+```shell
   501   642     1   0  9:59pm ??         0:00.96 /usr/local/Cellar/postgresql/11.3/bin/postgres -D /usr/local/var/postgres_monitor -p 5444 -h *  
 5017529 1 0 11:56pm ?? 0:00.05 /usr/local/Cellar/postgresql/11.3/bin/postgres -D /usr/local/var/primary -p 5432 -h *
 5017680 1 0 11:57pm ?? 0:00.04 /usr/local/Cellar/postgresql/11.3/bin/postgres -D /usr/local/var/secondary -p 5433 -h *
 50177391123 0 11:57pm ttys0030:00.00 grep postgresql
+```
 
 We can notice the 3 components - monitor, primary and secondary. Let's kill the secondary:
 
-kill -9 7680
+`kill -9 7680`
 
 Secondary node logs after executing kill -9:
 
+```shell
 23:58:10 INFO Calling node_active for node default/2/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 0.
 23:58:15 ERROR Failed to signal pid 7680, read from Postgres pid file.
 23:58:15 INFO Is PostgreSQL at "/usr/local/var/secondary" up and running?
@@ -153,6 +165,7 @@ Secondary node logs after executing kill -9:
 23:58:25 INFO Calling node_active for node default/2/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 589336.
 23:58:30 INFO Calling node_active for node default/2/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 589336.
 23:58:35 INFO Calling node_active for node default/2/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 589336.
+```
 
 We notice that:
 
@@ -163,6 +176,7 @@ We notice that:
 
 Simultaneous logs on the primary after we killed the secondary node:
 
+```shell
 23:58:05 INFO  Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 23:58:10 INFO Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 23:58:15 INFO Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
@@ -181,6 +195,7 @@ Simultaneous logs on the primary after we killed the secondary node:
 23:58:40 INFO Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 23:58:45 INFO Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 The log output here shows us why pg_auto_failover is a great failover solution.
+```
 
 It saw that the secondary was down, and instead of continuing **synchronous** streaming replication it switched to **asynchronous.** This means commits can still be done on the primary node, otherwise the primary would stop accepting writes (since they couldn't be synced ie. commited at the same time on the secondary).
 
@@ -188,6 +203,7 @@ It saw that the secondary was down, and instead of continuing **synchronous** st
 
 * * *
 
+```shell
 [~] => ps -ef | grep postgresql
 
 Output:
@@ -196,7 +212,9 @@ Output:
 501  7529     1   0 11:56pm ??         0:00.08 /usr/local/Cellar/postgresql/11.3/bin/postgres -D /usr/local/var/primary -p 5432 -h *
 501  7773     1   0 11:58pm ??         0:00.05 /usr/local/Cellar/postgresql/11.3/bin/postgres -D /usr/local/var/secondary -p 5433 -h *
 501  8042  1123   0 12:01am ttys003    0:00.00 grep postgresql
+```
 
+```shell
 [~] => kill -9 7529
 
 Simultaneous logs on the secondary after we killed the primary node:
@@ -229,8 +247,10 @@ Simultaneous logs on the secondary after we killed the primary node:
 **00:01:31 INFO  Transition complete: current state is now "primary"**
 00:01:31 INFO  Calling node_active for node default/2/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 
-Logs on the primary after we killed the (primary) PostgreSQL process:
+```
 
+Logs on the primary after we killed the (primary) PostgreSQL process:
+```shell
 00:01:01 INFO  Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 00:01:06 INFO  Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
 00:01:11 INFO  Calling node_active for node default/1/0 with current state: primary, PostgreSQL is running, sync_state is "sync", WAL delta is 0.
@@ -278,6 +298,8 @@ Done!
 00:01:28 INFO  Calling node_active for node default/1/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 0.
 00:01:33 INFO  Calling node_active for node default/1/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 0.
 00:01:38 INFO  Calling node_active for node default/1/0 with current state: secondary, PostgreSQL is running, sync_state is "", WAL delta is 0.
+
+```
 
 Events:
 

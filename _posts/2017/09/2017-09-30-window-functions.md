@@ -3,8 +3,7 @@ title: "T-SQL Window functions syntax"
 date: "2017-09-30"
 categories: 
   - "data-engineering"
-  - "sql-server"
-  - "t-sql"
+  - "sql"
 ---
 
 Window functions are an advanced and powerful feature of the T-SQL language. I will give a few tips on how to use and examples on the AdventureWorks2014 OLTP database.

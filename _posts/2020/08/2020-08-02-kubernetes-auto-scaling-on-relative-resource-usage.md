@@ -2,8 +2,8 @@
 title: "Kubernetes auto-scaling on relative resource usage"
 date: "2020-08-02"
 categories: 
-  - "data-engineering"
-  - "data-systems"
+  - "load-balancers"
+  - ""
 ---
 
 I am working on auto-scaling in Kubernetes and I was seeing something weird in my system and only now I realised that auto-scaling based on relative metrics (like CPU usage) really has to be done on requests instead of limits since the requested resource usage is guaranteed but the area between a limit and the requests usage is not guaranteed and depends on Kubernetes scheduler, if there are overcommits and etc (described well in [this](https://www.magalix.com/blog/kubernetes-resource-requests-and-limits-101) article[)](https://www.magalix.com/blog/kubernetes-resource-requests-and-limits-101)

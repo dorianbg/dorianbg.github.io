@@ -3,7 +3,6 @@ title: "How to fix 'Task not serializable' issues in Apache Spark"
 date: "2017-06-12"
 categories:
   - "data-engineering"
-  - "data-science"
 ---
 
 When using the RDD API, you can write Map functions which can serve as complex closures.

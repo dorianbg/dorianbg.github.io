@@ -3,8 +3,7 @@ title: "Loading Data into Snowflake Data Warehouse and performance of joins"
 date: "2018-03-16"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
+  - "databases"
 ---
 
 I wrote a detailed article showing how to load 6GB of data into Snowflake using the PUT and COPY INTO commands.

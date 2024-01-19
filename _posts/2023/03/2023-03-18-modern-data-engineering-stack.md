@@ -3,8 +3,6 @@ title: "Modern data engineering stack"
 date: "2023-03-18"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
 ---
 
 ### **Data storage**

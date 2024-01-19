@@ -3,8 +3,6 @@ title: "Data extraction and transformation design patterns"
 date: "2023-03-18"
 categories: 
   - "data-engineering"
-  - "data-systems"
-  - "data-warehousing"
 ---
 
 - You will need to choose between full and incremental extracts

@@ -3,8 +3,7 @@ title: "Windows functions in PostgresQL"
 date: "2017-11-03"
 categories: 
   - "data-engineering"
-  - "sql-server"
-  - "t-sql"
+  - "sql"
 ---
 
 ## 1. Setting up postgresql on Mac OS

@@ -1,5 +1,5 @@
 ---
-title: "My favourite papers on columnar database"
+title: "My favourite papers on columnar databases"
 date: "2023-03-18"
 categories: ["databases", "sql"]
 ---

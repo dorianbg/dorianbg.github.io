@@ -1,8 +1,7 @@
 ---
 title: "How get into top 30% of House Prices: Advanced Regression Kaggle competition with 50 lines of code"
 date: "2019-05-21"
-categories: 
-  - "data-science"
+categories: ["data-science"]
 ---
 
 This will be a quick guide on a very easy way to do machine learning competitions. This approach is very general and easily applicable to other competitions. I just want to make it clear that using this approach you will not win any competitons, but my goal is present a really nice and almost automated process which can get you above average scores in competitions.  

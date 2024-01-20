@@ -1,8 +1,8 @@
 ---
 title: "Apache Airflow for data pipelines and ETL management"
 date: "2018-02-01"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering"]
+tags: ["airflow"]
 ---
 
 I have been looking for good workflow management software and found Apache Airflow to be superior to other solutions.

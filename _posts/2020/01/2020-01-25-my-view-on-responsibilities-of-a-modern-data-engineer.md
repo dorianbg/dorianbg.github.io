@@ -1,6 +1,8 @@
 ---
 title: "My view on responsibilities of a modern data engineer"
 date: "2020-01-25"
+categories: ["data-engineering"]
+tags: ["principles"]
 ---
 
 In my opinion one of the main responsibilities of a data engineer is to build the infrastructure and clean data for efficient use by various stakeholders (analysts, data scientists...).

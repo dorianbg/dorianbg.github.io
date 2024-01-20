@@ -1,8 +1,8 @@
 ---
 title: "Clustering keys Snowflake"
 date: "2018-02-11"
-categories: 
-  - "data-engineering"
+categories: ["databases", "data-engineering", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 I've written a blog post covering in depth the new **Clustering Keys** feature of Snowflake.

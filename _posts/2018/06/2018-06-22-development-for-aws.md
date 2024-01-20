@@ -1,8 +1,8 @@
 ---
 title: "Tips for easier development on AWS"
 date: "2018-06-22"
-categories: 
-  - "data-engineering"
+categories: ["cloud", "software-development"]
+tags: ["aws"]
 ---
 
 I wanted to share a couple of tips for easier development on AWS.

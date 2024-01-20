@@ -1,8 +1,8 @@
 ---
 title: "Modern data engineering stack"
 date: "2023-03-18"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering"]
+tags: ["principles"]
 ---
 
 ### **Data storage**

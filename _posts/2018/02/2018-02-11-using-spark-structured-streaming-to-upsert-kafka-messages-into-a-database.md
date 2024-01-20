@@ -1,8 +1,8 @@
 ---
 title: "Using Spark Structured Streaming to upsert Kafka messages into a database"
 date: "2018-02-11"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering", "sql"]
+tags: ["kafka", "spark", "sql"]
 ---
 
 I wrote a detailed and technical blog post demonstrating an integration of Spark Structured Streaming with Apache Kafka messages and Snowflake.

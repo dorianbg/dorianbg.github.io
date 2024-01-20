@@ -1,8 +1,8 @@
 ---
 title: "Caching in Snowflake Data Warehouse"
 date: "2018-03-14"
-categories: 
-  - "databases"
+categories: ["databases", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 I wrote a technical article covering how Snowflake uses caching on several layers (virtual warehouses caching data and caching of result sets).

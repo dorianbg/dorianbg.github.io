@@ -1,8 +1,8 @@
 ---
 title: "My favorite features of Snowflake Data Warehouse"
 date: "2018-03-14"
-categories: 
-  - "databases"
+categories: ["databases", "data-engineering", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 I wrote a blog post describing my 10 favorite features of Snowflake.

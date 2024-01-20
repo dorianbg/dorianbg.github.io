@@ -1,9 +1,8 @@
 ---
 title: "My articles for Sonra Intelligence"
 date: "2018-05-11"
-categories: 
-  - "data-engineering"
-  - "databases"
+categories: ["databases", "data-engineering", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 ## Apache Airflow

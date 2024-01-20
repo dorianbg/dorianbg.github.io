@@ -1,8 +1,8 @@
 ---
 title: "Window Functions on Snowflake"
 date: "2018-02-01"
-categories: 
-  - "data-engineering"
+categories: ["databases", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 I've written a blog post on [sonra.io](https://sonra.io) covering window function features supported by Snowflake data warehouse.

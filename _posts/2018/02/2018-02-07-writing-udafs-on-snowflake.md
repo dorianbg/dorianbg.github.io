@@ -1,8 +1,8 @@
 ---
 title: "Writing UDAFs on Snowflake"
 date: "2018-02-07"
-categories: 
-  - "data-engineering"
+categories: ["databases", "data-engineering", "sql"]
+tags: ["snowflake", "sql"]
 ---
 
 I've written a blog post explaining in-depth how to create User Defined Aggregate Functions (UDAFs) using Javascript on Snowflake.

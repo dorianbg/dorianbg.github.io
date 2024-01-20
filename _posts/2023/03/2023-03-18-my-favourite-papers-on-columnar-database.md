@@ -1,8 +1,7 @@
 ---
 title: "My favourite papers on columnar database"
 date: "2023-03-18"
-categories: 
-  - "databases"
+categories: ["databases", "sql"]
 ---
 
 ### [The Design and Implementation of Modern Column-Oriented Database Systems](https://stratos.seas.harvard.edu/files/stratos/files/columnstoresfntdbs.pdf)

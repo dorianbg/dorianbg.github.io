@@ -1,8 +1,8 @@
 ---
 title: "Advanced Spark Structured Streaming - Aggregations, Joins, Checkpointing"
 date: "2018-02-11"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering", "sql"]
+tags: ["spark", "sql"]
 ---
 
 I wrote a blog post demonstrating advanced Spark Structured Streaming topics.

@@ -4,12 +4,15 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-A software engineer with interests in data systems, platform engineering and developer experience. Based in London, United Kingdom.
+A software engineer based in London, UK with interests in data systems, platform engineering and developer experience.
 
-I am interested in idempotency, fault tolerance and simplicity.
+Big fan of proven and robust (aka "boring") technologies.
 
-Favourite data systems:
-- Databases: PostgreSQL/DuckDB
-- Languages: Python
-- Back-end engineering
-- Data ops
+Areas of interest:
+- idempotency
+- fault tolerance - HA APIs 
+- developer productivity
+- databases: PostgreSQL, DuckDB
+- languages: Python, SQL
+- data ops
+- dev ops - Kubernetes

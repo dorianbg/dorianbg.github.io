@@ -1,8 +1,8 @@
 ---
 title: "Important skills for data engineers"
 date: "2023-03-18"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering"]
+tags: ["principles"]
 ---
 
 Data engineering specific:

@@ -1,8 +1,8 @@
 ---
 title: "Data pipeline design anti-patterns"
 date: "2023-03-18"
-categories: 
-  - "data-engineering"
+categories: ["data-engineering"]
+tags: ["principles"]
 ---
 
 - Bunch of scripts

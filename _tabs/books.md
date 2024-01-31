@@ -12,16 +12,16 @@ From all the books I've read and courses I've done, below is a small subset of t
 - [Carnegie Mellon University: Intro to Database Systems course](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbj8BMuIrRcacnQh20hmY9g)
 - [Carnegie Mellon University: Advanced Database Systems course](https://www.youtube.com/playlist?list=PLSE8ODhjZXjYzlLMbX3cR0sxWnRM7CLFn)
 
-##### Back-end development in Python
-- [FastAPI: Modern Python Web Development](https://www.goodreads.com/book/show/140398933-fastapi)
+##### Cloud and DevOps
+- [Kubernetes in action](https://www.goodreads.com/book/show/34013922-kubernetes-in-action)
+- [Microsoft Azure Master Class v2 by John Savill](https://www.youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY)
 
 ##### Java
 - [Java 8 in Action](https://www.goodreads.com/book/show/20534354-java-8-in-action)
 - [Effective Java](https://www.goodreads.com/book/show/34927404-effective-java)
 
-##### Cloud and DevOps
-- [Kubernetes in action](https://www.goodreads.com/book/show/34013922-kubernetes-in-action)
-- [Microsoft Azure Master Class v2 by John Savill](https://www.youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY)
+##### Back-end development in Python
+- [FastAPI: Modern Python Web Development](https://www.goodreads.com/book/show/140398933-fastapi)
 
 ##### Finance
 - [Central Banking 101](https://www.goodreads.com/book/show/56863052-central-banking-101)

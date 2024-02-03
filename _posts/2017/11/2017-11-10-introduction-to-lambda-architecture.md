@@ -13,7 +13,7 @@ categories:
 - [Implementing Speed Layer using Spark Structured Streaming]({% link _posts/2017/11/2017-11-11-building-the-speed-layer-of-lambda-architecture-using-structured-spark-streaming.md %})
 - [Implementing Serving Layer using Redshift]({% link _posts/2017/11/2017-11-11-building-the-serving-layer-of-lambda-architecture-using-redshift.md %})
 
-### You can find a Youtube playlist explaining the code and results for each of the topics [here](https://www.youtube.com/playlist?list=PLEskekTL9hAMmu254pR7u-nbPdPbp5BDq).
+You can find a Youtube playlist explaining the code and results for each of the topics [here](https://www.youtube.com/playlist?list=PLEskekTL9hAMmu254pR7u-nbPdPbp5BDq) and you can find the source code of the series [here](https://github.com/dorianbg/lambda-architecture-demo).
 
 * * *
 

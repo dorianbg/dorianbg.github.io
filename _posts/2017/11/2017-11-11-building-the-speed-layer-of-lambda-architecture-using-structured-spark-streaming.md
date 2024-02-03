@@ -17,9 +17,7 @@ You can also follow a walk-through of the code in this Youtube video:
 
 {% include embed/youtube.html id='X938VfXVd9M' %}
 
-You can find the code from this blog post in [this](https://github.com/dorianb96/lambda-architecture-demo/blob/master/Implementing%20the%20speed%20layer%20of%20lambda%20architecture%20using%20Structured%20Spark%20Streaming) github repository.
-
-As this is a Zeppelin notebook you likely won't be able to view it on github.
+You can find the code from this blog post in [this](https://github.com/dorianb96/lambda-architecture-demo/blob/master/Implementing%20the%20speed%20layer%20of%20lambda%20architecture%20using%20Structured%20Spark%20Streaming) repository **but** this is a Zeppelin notebook you likely won't be able to view it on github.
 
 * * *
 

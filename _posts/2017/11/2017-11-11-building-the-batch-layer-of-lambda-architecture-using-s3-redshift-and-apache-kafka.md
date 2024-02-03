@@ -15,7 +15,9 @@ categories:
 
 You can also follow a walk-through of the code in this Youtube video:
 
-{% include embed/youtube.html id='4G1bOOMUjw8' %}
+{% include embed/youtube.html id='4G1bOOMUjw8' %} 
+
+and you can find the source code of the series [here](https://github.com/dorianbg/lambda-architecture-demo).
 
 * * *
 

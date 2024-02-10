@@ -69,5 +69,3 @@ Python:     3.11.8
 Path:       $HOME/.pyenv/versions/3.11.8
 Executable: $HOME/.pyenv/versions/3.11.8/bin/python3.11
 ```
-
-This simplicity of setup wasn't in Python five years ago. So it's a pleasure to see how the Python ecosystem has matured.  

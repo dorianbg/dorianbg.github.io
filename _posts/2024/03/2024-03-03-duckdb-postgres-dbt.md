@@ -1,3 +1,11 @@
+---
+title: 'How I halved the runtime of my PostgreSQL dbt model using DuckDB'
+date: 2024-03-03 12:00:00
+categories: ["databases", "data-engineering", "sql"]
+tags: ["duckdb", "dbt", "postgresql"]
+toc: true
+---
+
 # How I halved the runtime of my PostgreSQL dbt model using DuckDB
 
 With dbt, you can build fairly cross compatible SQL models with only a bit of effort.
